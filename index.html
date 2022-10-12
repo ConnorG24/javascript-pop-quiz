@@ -16,22 +16,30 @@
     <div class="mainMenu" >
         <div id='info'>
             <div class="Title">Pop Quiz of Code</div>
-            <p>To begin the Quiz, click the start button. Once the quiz is started
-            you will only have 60 seconds to complete it. Upon getting a question incorrect
-            you will lose points as well as time. Once the quiz is finished you will be able
-            record you initals and save your score!
+            <p>To begin the Quiz, click the start button. Once the quiz is started</p>
+           <p> you will only have 60 seconds to complete it. Upon getting a question incorrect</p>
+           <p> you will lose points as well as time. Once the quiz is finished you will be able</p>
+            <p>record you initals and save your score!
             </p>
         </div> 
         <button class="gameStart">Start</button>
+        <button class="hide gameReStart">Back to Menu</button>
         <div id="question-container" class="hide">
             <div id="question">question</div>
             <div id="answer-buttons">
-                <!-- <button class="btn">Answer 1</button> -->
-                <!-- <button class="btn">Answer 2</button> -->
-                <!-- <button class="btn">Answer 3</button> -->
-                <!-- <button class="btn">Answer 4</button> -->
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
 
             </div>
+        </div>
+        <div id="LeaderBoards"class="fix">
+            <div class="score"></div>
+        <form id="scoreForm" class="hide">
+            <label for="name">Leave your name!</label>
+            <input type="text" class="form-input" name="first-name" placeholder="Enter first name"/>
+        </form>
         </div>
     </div>
     

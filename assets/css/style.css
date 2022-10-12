@@ -1,0 +1,62 @@
+.hide {
+    display: none;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0%;
+    line-height: 1.5;
+}
+body{
+    font-size: larger;
+    width: auto;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+header{
+  margin: 0 auto 50px auto;
+  width: 100%;
+  padding: 30px;
+  background: #003459;
+  text-align: center;
+}
+.mainMenu{
+    
+  
+    /* width: 800px; */
+    /* max-width: 80%; */
+    /* border-radius: 5px; */
+    /* background-color: gray; */
+    /* padding: 10px; */
+    float: center;
+    text-align: center;
+}
+#answer-buttons{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    font-size: 1.2em;
+    
+    padding: 20px;
+    text-align: center;
+    margin-top: 0.6em;
+    
+}
+.gameStart{
+    
+    border-radius: 8px;
+    
+    
+    font-size: 1.2em;
+    letter-spacing: 0.21px;
+    line-height: 16px;
+    max-width: 255px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 0.6em;
+   
+}
+.timer{
+color: white;
+}
