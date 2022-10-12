@@ -16,6 +16,7 @@ var randomizeQuestion;
 var questionTracker; 
 var timerCount = 0;
 var scoreCount = 0;
+//array of questions with their answers
 var questions = [
     {
         question: "What does a varible do?",
@@ -68,7 +69,7 @@ var questions = [
     },
 ];
 
-
+// for when the start button is clicked
 function startGame() {
     timerCount = 25;
     scoreCount = 0;
@@ -81,6 +82,7 @@ function startGame() {
     setTime();
     nextQuestion();
 }
+//handles how the next question in genererated and checks for when all questions have been used
 function nextQuestion(){
     resetQuestion(); 
     
@@ -90,6 +92,7 @@ function nextQuestion(){
         gameEnd();
     }
 }
+//when nextQuestion is called this prints the current question to the screen
 function showQuestion(question){
     questionEl.innerText = question.question;
     question.answers.forEach(answer => {
@@ -108,16 +111,20 @@ function showQuestion(question){
         })
     });
 }
+//this is for leaderboard-----incomplete
 function handleFormSubmit(event){
     event.preventDefeault();
     var name = document.querySelector("#name").value;
 }
+// enables the answes to properly swap to the relavent question
 function resetQuestion(){
     while (answerEl.firstChild) {
         answerEl.removeChild(answerEl.firstChild);
     }
 }
+// this is called when the game ends
 function gameEnd(){
+    timerEl.textContent = ''; 
     questionContainEl.classList.add("hide");
     //startButton.classList.remove("hide");  
     gameRestart.classList.remove('hide'); 
@@ -129,23 +136,27 @@ function gameEnd(){
     //infoEl.classList.remove("hide");
     
 }
+// this is for the timer 
 function setTime(){
     var timerInterval = setInterval(function(){
         timerCount--;
         timerEl.textContent = "Timer: " + timerCount;
         if(timerCount === 0) {
-            clearInterval(timerInterval);
+            
+            clearInterval(timeInterval);
             gameEnd();
         }
     }, 1000);
 }
+// when the reset button is clicked at the end it sets to the very start 
 function gameReset(){
     questionContainEl.classList.add("hide");
     startButton.classList.remove("hide");  
     infoEl.classList.remove("hide");
     gameRestart.classList.add("hide");
     scoreDisplay.classList.add("hide");
-    scoreFormEl2.classList.add("hide"); 
+    scoreFormEl2.classList.add("hide");
+    
 }
 startButton.addEventListener("click",startGame);
 
